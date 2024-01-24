@@ -1,0 +1,724 @@
+@charset "UTF-8";
+/*------------------------------
+  PATRONES DE COLORES
+  -----------------------------*/
+/*------------------------------
+1. TIPOGRAFIA DEL SITIO
+-----------------------------*/
+html {
+  font-size: 14px; }
+
+body {
+  font-family: 'Lato', sans-serif;
+  color: #696969; }
+
+img {
+  width: 12rem;
+  height: auto; }
+
+/*------------------------------
+ 2. ESTILOS GENERALES DE BOTONES
+-------------------------------*/
+.btn {
+  border-radius: 2rem;
+  padding: .6rem 2rem;
+  font-weight: bold; }
+
+/*------------------------------
+ 3. ESTILOS COLOR PRINCIPAL
+-------------------------------*/
+.bg-primary {
+  background-color: #00ad75 !important; }
+
+.text-primary {
+  color: #00ad75 !important; }
+
+/*Estilos btn-primary*/
+.btn-primary {
+  color: #fff;
+  background-color: #00ad75;
+  border-color: #00ad75;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease; }
+
+.btn-primary:hover {
+  color: #35363c;
+  background-color: #fff;
+  border-color: #00ad75; }
+
+.btn-primary:active {
+  color: #35363c !important;
+  background-color: #00c786 !important;
+  border-color: #00d691 !important; }
+
+.btn-primary:focus {
+  color: #35363c !important;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 173, 117, 0.5) !important;
+          box-shadow: 0 0 0 0.2rem rgba(0, 173, 117, 0.5) !important; }
+
+/*Insertamos la flecha del boton principal*/
+.btn-primary:after {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: "\f138";
+  position: relative;
+  left: .6rem;
+  top: .1rem;
+  -webkit-transform: left .3s ease;
+          transform: left .3s ease; }
+
+.btn-primary:hover:after,
+.btn-primary:focus:after,
+.btn-primary:active:after {
+  left: .25rem; }
+
+/*Insertamos la caja blanca del boton principal*/
+.btn-primary:before {
+  content: "";
+  z-index: -1;
+  width: 0px;
+  height: 100%;
+  background: #fff;
+  position: absolute;
+  left: 50%;
+  top: 0%;
+  -webkit-transform: skew(45deg, 0deg);
+          transform: skew(45deg, 0deg);
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease; }
+
+.btn-primary:hover:before,
+.btn-primary:focus:before,
+.btn-primary:active:before {
+  width: 130%;
+  left: -15%; }
+
+/*------------------------------
+ 4. ESTILOS COLOR SECUNDARIO
+-------------------------------*/
+.bg-secondary {
+  background-color: #35363c !important; }
+
+.text-secondary {
+  color: #35363c !important; }
+
+/*------------------------------
+ 5. ESTILOS .redes-sociales
+-------------------------------*/
+.redes-sociales li a i {
+  color: #fff;
+  font-size: 1.5rem;
+  padding: .6rem 1rem;
+  opacity: .8;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out; }
+
+.redes-sociales li a i:hover {
+  opacity: 1;
+  -webkit-transform: scale(1.3) rotate(360deg);
+          transform: scale(1.3) rotate(360deg); }
+
+/*--------------------------------
+5.1 ESTILOS SISTEMAS ENLCAES
+--------------------------------*/
+/*Boton*/
+#boton-inicio .btn-primary:hover {
+  background-color: #00ad75;
+  -webkit-text-decoration-color: red;
+          text-decoration-color: red; }
+
+#ilogo a {
+  text-decoration: none;
+  color: #35363c; }
+
+/*------------------------------
+ 6. ESTILOS "#menu-navegacion   "
+-------------------------------*/
+/*Quitamos estilos al boton por defecto*/
+#menu-navegacion .navbar-toggler {
+  padding: 0;
+  font-size: 1rem;
+  line-height: 1;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  outline: 0; }
+
+/*Estilos boton menu personalizado*/
+#menu-navegacion .boton-menu:before {
+  font-family: 'Font Awesome 5 Free';
+  content: "\f0c9";
+  font-weight: 900;
+  font-size: 2rem;
+  color: #ffffff; }
+
+/*Estilos boton menu personalizado*/
+#menu-navegacion .icono-cerrar:before {
+  content: "\f00d";
+  position: relative;
+  left: 0.2rem; }
+
+/*Estilos de los enlaces del menu-navegacion*/
+.navbar-dark .navbar-nav .nav-link {
+  padding: 1rem 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: .5rem;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease; }
+
+.navbar-dark .navbar-nav .nav-link:after {
+  font-family: 'Font Awesome 5 Free';
+  content: "\f105";
+  font-weight: 900;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease; }
+
+/*Estilos estado hover de enlace*/
+.navbar-dark .navbar-nav .nav-link:hover {
+  background-color: #4d4e57; }
+
+.navbar-dark .navbar-nav .nav-link:hover:after {
+  -webkit-transform: rotateZ(180deg);
+          transform: rotateZ(180deg); }
+
+/*Estilos para el enlace activo*/
+.navbar-dark .navbar-nav .nav-link.active {
+  background-color: #00ad75; }
+
+/*Clase cuando la barra de navegacion se fija a la parte superior*/
+.menu-fijo {
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+  background-color: #1d1e21 !important;
+  width: 100% !important; }
+
+/*------------------------------------------
+7.  ESTILOS PARA "ANIMACION"
+------------------------------------------*/
+.swiper-slide {
+  height: 34rem;
+  /*450px*/
+  text-align: center;
+  color: #fff;
+  background-size: cover;
+  background-position: center center; }
+
+.swiper-slide::before {
+  content: "";
+  position: absolute;
+  background: black;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  opacity: .4; }
+
+.swiper-button-prev,
+.swiper-button-next {
+  background-image: none;
+  background-color: rgba(0, 0, 0, 0.29);
+  width: 3rem;
+  height: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  border-radius: 50%;
+  opacity: .7;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease; }
+
+.swiper-button-prev::before,
+.swiper-button-next:before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: "\f060"; }
+
+.swiper-button-next:before {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg); }
+
+/*Estado hover de los botones*/
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background-color: rgba(0, 0, 0, 0.46);
+  color: #00ad75; }
+
+/*Estilos para el paginador*/
+.swiper-pagination-bullet {
+  width: 1rem;
+  height: 1rem;
+  margin: 0 .4rem !important; }
+
+.swiper-pagination-bullet-active {
+  background-color: #00ad75; }
+
+/*------------------------------------------
+ 8. ESTILOS PARA "#bienvenidos"
+ ------------------------------------------*/
+.contenedor-video a {
+  background-color: rgba(255, 255, 255, 0.79);
+  width: 7rem;
+  height: 7rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 50%;
+  color: #00ad75;
+  font-size: 2rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-clip: padding-box;
+  border: 0 solid transparent;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease; }
+
+.contenedor-video a:hover {
+  background-color: #00ad75;
+  color: #fff;
+  border: 10px solid rgba(255, 255, 255, 0.5); }
+
+.contenedor-video img {
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease; }
+
+.contenedor-video:hover img {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2); }
+
+/*------------------------------------------
+  9. ESTILOS PARA "te-ayudamos"
+------------------------------------------*/
+#te-ayudamos {
+  position: relative;
+  -webkit-transform: skew(0, 6deg);
+          transform: skew(0, 6deg); }
+
+#te-ayudamos::before {
+  content: "";
+  position: absolute;
+  background: rgba(0, 0, 0, 0.52);
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0; }
+
+#te-ayudamos .container {
+  -webkit-transform: skew(0, -6deg);
+          transform: skew(0, -6deg); }
+
+/*------------------------------------------
+ 10. ESTILOS PARA "premios"
+ ------------------------------------------*/
+.contador-linea {
+  background-color: #00ad75;
+  width: 4rem;
+  height: .4rem;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease; }
+
+#premios .col-6:hover .contador-linea {
+  bottom: 1rem;
+  -webkit-transform: translateX(-50%) rotate(180deg);
+          transform: translateX(-50%) rotate(180deg);
+  background-color: #35363c; }
+
+/*------------------------------------------
+10. ESTILOS PARA "nuestra-app"
+------------------------------------------*/
+#nuestra-app::before {
+  content: "";
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0; }
+
+ /*------------------------------------------
+11. ESTILOS PARA "#contacto"
+------------------------------------------*/
+#contacto .detalle-rectangulo {
+  position: absolute;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: #00ad75;
+  left: 50%;
+  bottom: 0;
+  -webkit-transform: translate(-50%) translateY(50%) rotate(45deg);
+          transform: translate(-50%) translateY(50%) rotate(45deg); }
+
+.input-group-cita {
+  margin-bottom: 0;
+  cursor: pointer; }
+
+/*Personalizando el selector de fecha*/
+.picker__box {
+  border: 5px solid #00ad75; }
+
+.picker--focused .picker__day--selected,
+.picker__day--selected, .picker__day--selected:hover {
+  background: #00ad75;
+  color: #fff; }
+
+.picker__day--today:before {
+  border-top: .5em solid #ffffff; }
+
+.picker__select--year {
+  margin-top: -.5rem;
+  padding: 0 .5rem;
+  border-radius: .5rem; }
+
+/*Personalizando el selector de hora*/
+.picker--focused .picker__list-item--selected,
+.picker__list-item--selected,
+.picker__list-item--selected:hover {
+  background: #00ad75; }
+
+.picker__list-item--highlighted, .picker__list-item:hover {
+  border-color: #007a53; }
+
+.picker__list {
+  padding: .5rem 0; }
+
+.picker--time .picker__button--clear {
+  color: #fff;
+  background: #ff520d;
+  border-radius: .5rem;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease; }
+
+.picker--time .picker__button--clear:before {
+  width: 0;
+  border-top: 0px solid #e20;
+  display: none; }
+
+/*------------------------------------------
+17. ESTILOS PARA "#pie-de-pagina"
+------------------------------------------*/
+.columna-inclinada::before {
+  content: "";
+  position: absolute;
+  background: #00ad75;
+  top: 0;
+  bottom: 0;
+  left: -100%;
+  right: -100%; }
+
+.enlaces-secundario {
+  border-bottom: 1px solid #5d666f;
+  -webkit-box-shadow: 0 1px #212529;
+          box-shadow: 0 1px #212529; }
+
+.enlaces-secundario a {
+  padding: 1rem;
+  color: white;
+  text-decoration: none;
+  display: block; }
+
+/*Estilos para internet explorer 11*/
+.ie11 #bienvenidos .contenedor-video img {
+  width: 100%; }
+
+.ie11 .navbar-dark .navbar-nav .nav-link::after {
+  display: block; }
+
+/*------------------------------------------
+  MEDIA QUERY
+  ------------------------------------------*/
+@media (min-width: 768px) {
+  .navbar-dark .navbar-nav .nav-link:after {
+    content: ""; }
+
+  .navbar-dark .navbar-nav .nav-link {
+    padding: .7rem 1.2rem;
+    border-radius: 1.5rem; }
+
+  #te-ayudamos {
+    -webkit-transform: skew(0, 3deg);
+            transform: skew(0, 3deg); }
+
+  #te-ayudamos .container {
+    -webkit-transform: skew(0, -3deg);
+            transform: skew(0, -3deg); }
+
+  .columna-inclinada::before {
+    left: -300%;
+    right: 0%;
+    -webkit-transform: skewX(20deg);
+            transform: skewX(20deg); } }
+@media (min-width: 990px) {
+  html {
+    font-size: 16px; }
+
+  .swiper-slide {
+    height: 37.5rem;
+    /*600px/16px*/ } }
+@media (min-width: 1200px) {
+  .swiper-slide {
+    height: 44rem;
+    /*700px/16px*/ } }
+/*Boton Desplegable*/
+.btn-back-to-top {
+  display: none;
+  position: fixed;
+  width: 45px;
+  height: 45px;
+  bottom: 45px;
+  right: 45px;
+  background-color: #00ad75;
+  opacity: 0.5;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 1000;
+  border-radius: 100%;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s; }
+
+.symbol-btn-back-to-top {
+  font-size: 22px;
+  color: white;
+  line-height: 1em; }
+
+.btn-back-to-top:hover {
+  opacity: 1;
+  cursor: pointer; }
+
+@media (max-width: 576px) {
+  .btn-back-to-top {
+    bottom: 15px;
+    right: 15px; } }
+/*Estilos para formulario control caja de texto*/
+#caja .form-control {
+  height: 3rem; }
+
+/** Categorias **/
+.categoria {
+  overflow: hidden;
+  padding-bottom: 60px;
+  height: calc(auto + 30px); }
+
+.categoria span::before {
+  content: '';
+  display: block;
+  margin: 0 auto 20px auto;
+  height: 3px;
+  width: 60px;
+  background-color: #00ad75;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease; }
+
+.categoria:hover span::before {
+  width: 180px; }
+
+/*CLASE MENU BOOTSTRAP4*/
+/*---------------------------
+/*6. Estilos Color Oscuro
+/*---------------------------*/
+.text-dark {
+  color: #999 !important; }
+
+/*Estilos #navegacion*/
+#navegacion {
+  background: #191916; }
+  #navegacion .container {
+    max-width: 100%; }
+  #navegacion .navbar-brand {
+    margin-right: 0;
+    padding: 0;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%); }
+    #navegacion .navbar-brand img {
+      width: 12rem;
+      height: auto; }
+
+/*Estilos Mmenu.js*/
+.mm-navbars_top, .mm-navbar {
+  background: #ccc; }
+
+/*Estilos de los enlaces*/
+.mm-menu a, .mm-menu a:active, .mm-menu a:hover, .mm-menu a:link, .mm-menu a:visited {
+  color: #333333;
+  font-size: 1.1rem;
+  font-weight: 400; }
+
+/*Estilos Viñeta-menu*/
+.mm-btn_next:after, .mm-btn_prev:before {
+  border: 2px solid #333333;
+  border-bottom: none;
+  border-right: none;
+  width: 4px;
+  height: 4px; }
+
+/*Estilos para Mburger*/
+.mburger {
+  --mb-bar-width:0.35;
+  /*Ancgura de las barras deln boton*/
+  --mb-bar-height:4px;
+  /*Altura de las barras de boton*/
+  --mb-bar-spacing:5px;
+  /*Separacion de las battas*/
+  color: #fff !important;
+  height: 50px;
+  width: 103px;
+  line-height: 0;
+  padding: 0 0 0 33px; }
+  .mburger:hover {
+    background: rgba(255, 255, 255, 0.21); }
+  .mburger b {
+    margin-left: -6px; }
+
+/*Estilos para los botones del encabezad*/
+.btn-iconos {
+  background: transparent;
+  border: none;
+  color: #fff;
+  padding: 0.5rem; }
+  .btn-iconos:hover, .btn-iconos:focus {
+    background: rgba(255, 255, 255, 0.2);
+    outline: none;
+    color: #fff;
+    text-decoration: none; }
+
+.boton-carrito .dropdown-menu {
+  -webkit-box-shadow: 0 0 13px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 13px rgba(0, 0, 0, 0.5);
+  padding: 1.5rem 1rem;
+  margin-top: 1rem; }
+  .boton-carrito .dropdown-menu::before {
+    content: "";
+    position: absolute;
+    background: white;
+    width: 1.5rem;
+    height: 1.5rem;
+    right: 1rem;
+    top: -0.5rem;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    border-radius: .2rem;
+    -webkit-box-shadow: -5px -5px 5px rgba(8, 8, 8, 0.18);
+            box-shadow: -5px -5px 5px rgba(8, 8, 8, 0.18); }
+
+/*Ocultanos en icono fa-times por defecto*/
+.btn-buscar .fa-times {
+  display: none; }
+.btn-buscar.boton-buscar-activo .fa-search {
+  display: none; }
+.btn-buscar.boton-buscar-activo .fa-times {
+  display: block; }
+
+/*---------------------------
+/*7. Medias Queries
+/*---------------------------*/
+@media (min-width: 992px) {
+  html {
+    font-size: 15px; }
+
+  /*Estilos de los enlaces del menu-principal para quitar las transciones del boton*/
+  #menu-principal1 .navbar-nav .nav-link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-radius: .1rem; }
+
+  #menu-principal1 .navbar-nav .nav-link:hover:after {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg); }
+
+  /******/
+  #navegacion .navbar-brand {
+    margin-right: 1.5rem;
+    padding: .7rem 0;
+    position: static;
+    left: auto;
+    -webkit-transform: translateX(0);
+            transform: translateX(0); }
+
+  #navegacion .navbar-dark .navbar-nav .nav-link {
+    color: white;
+    padding: .9rem;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease; }
+
+  #navegacion .navbar-nav .nav-link:hover, #navegacion .navbar-nav .nav-link:focus {
+    color: rgba(255, 255, 255, 0.75);
+    background: rgba(255, 255, 255, 0.23);
+    -webkit-box-shadow: 0 -5px 0 #00ad75 inset;
+            box-shadow: 0 -5px 0 #00ad75 inset;
+    cursor: pointer; }
+
+  #menu-principal .dropdown-toggle::after {
+    -webkit-transform: scale(0.7) translateY(3px);
+            transform: scale(0.7) translateY(3px); }
+  #menu-principal .dropdown-menu {
+    border-radius: 0;
+    -webkit-box-shadow: 0 3px 10px #0404045e;
+            box-shadow: 0 3px 10px #0404045e;
+    border: 0;
+    background: #f7f7f7;
+    -webkit-transform: translateY(-2px);
+            transform: translateY(-2px); }
+  #menu-principal .dropdown-menu .fa-windows {
+    -webkit-transform: scale(0.8) translateY(1px);
+            transform: scale(0.8) translateY(1px); } }
+@media (min-width: 992px) {
+  #navegacion .container {
+    max-width: 1140px; }
+  #navegacion .campo-buscar,
+  #navegacion .boton-buscar {
+    border: none;
+    background: #3c3c3c;
+    color: #eaeaea;
+    font-weight: lighter; }
+  #navegacion .boton-buscar:hover,
+  #navegacion .boton-buscar:focus {
+    background: #bdbdbd;
+    color: #fff; }
+  #navegacion .campo-buscar::-webkit-input-placeholder {
+    color: #b9b9b9; }
+  #navegacion .campo-buscar:-ms-input-placeholder {
+    color: #b9b9b9; }
+  #navegacion .campo-buscar::-ms-input-placeholder {
+    color: #b9b9b9; }
+  #navegacion .campo-buscar::placeholder {
+    color: #b9b9b9; } }
+
+/*# sourceMappingURL=estilos.css.map */
